@@ -192,25 +192,31 @@ a { color: inherit; text-decoration: none; }
   width: 44px;
   height: 44px;
   cursor: pointer;
-  padding: 4px;
+  padding: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
 }
 
 .menu-button span {
   display: block;
+  width: 22px;
   height: 2px;
   background: var(--black);
-  margin: 6px 0;
-  transition: transform .25s ease, opacity .25s ease;
+  border-radius: 2px;
+  transition: transform .3s ease, opacity .3s ease;
 }
 
 .menu-button[aria-expanded="true"] span:nth-child(1) {
-  transform: translateY(8px) rotate(45deg);
+  transform: translateY(7px) rotate(45deg);
 }
 .menu-button[aria-expanded="true"] span:nth-child(2) {
   opacity: 0;
+  transform: scaleX(0);
 }
 .menu-button[aria-expanded="true"] span:nth-child(3) {
-  transform: translateY(-8px) rotate(-45deg);
+  transform: translateY(-7px) rotate(-45deg);
 }
 
 .mobile-menu {
@@ -899,8 +905,6 @@ address {
 
   .menu-button {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
   }
 
   .mobile-menu {
